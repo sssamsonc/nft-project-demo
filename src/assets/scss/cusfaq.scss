@@ -1,0 +1,27 @@
+@import "./var";
+
+#app {
+	dl {
+		text-align: left;
+		margin: 0 0 rem(15);
+		@media (min-width: $screen-lg) {
+			margin: 0 0 rem(80);
+		}
+
+		dt {
+			color: $color-red;
+			font-size: rem(14);
+			line-height: 1.2;
+			margin-bottom: rem(3);
+
+			@media (min-width: $screen-lg) {
+				font-size: rem(42);
+				margin-bottom: rem(15);
+			}
+		}
+
+		dd {
+
+		}
+	}
+}

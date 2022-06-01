@@ -1,0 +1,42 @@
+@mixin inline-list($display: inline-block, $recursive: false) {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	> li {
+		margin: 0;
+		padding: 0;
+		display: $display;
+	}
+
+	@if ($recursive) {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+				margin: 0;
+				padding: 0;
+				display: $display;
+			}
+		}
+	}
+}
+
+$browser-context: 16;
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}
+
+$color-red: #ff552f;
+$color-white: #fff;
+
+// 👇 Small screen / tablet
+$screen-sm: 576px;
+// Medium screen / desktop
+$screen-md: 768px;
+// Large screen / wide desktop
+$screen-lg: 992px;
+// Extra large screen / full hd
+$screen-xl: 1200px;
